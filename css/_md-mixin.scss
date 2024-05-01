@@ -15,7 +15,13 @@ $bpoint-mob: 767px;
     }
 }
 
-@mixin mq-tab-lock() {
+@mixin mq-tab-max() {
+    @media screen and (max-width: $bpoint-tab-lock) {
+        @content;
+    }
+}
+
+@mixin mq-tab-minmax() {
     @media screen and (min-width: $bpoint-tab) and (max-width: $bpoint-tab-lock) {
         @content;
     }

@@ -59,6 +59,10 @@ address {
     color: currentColor;
 }
 
+address {
+    font-style: normal;
+}
+
 button {
     border: none;
     padding: 0;
@@ -88,10 +92,22 @@ utils
 Global 
 ========================== */
 
+
+
 .container {
     max-width: 448px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+.logo-icon {
+    &__light {
+        opacity: 1;
+    }
+
+    &__dark {
+        opacity: 0;
+    }
 }
 
 .page-title {
@@ -128,9 +144,47 @@ Global
     letter-spacing: 0.02em;
 }
 
+.section-padding {
+    padding: 120px 0;
+    background-color: rgba(23, 26, 36, 0.2);
+}
+
+.main-btn {
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+
+    border: 1px solid var(--accent-color);
+    border-radius: 25px;
+    min-width: 160px;
+    padding: 12px 0;
+    color: var(--light-text-color);
+
+    background-color: transparent;
+    transition: background-color var(--transition),
+    color var(--transition);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        color: var(--light-text-color);
+    }
+}
+
 @include mq-tab() {
     .container {
         max-width: 720px;
+    }
+
+    .logo-icon {
+        &__light {
+            opacity: 0;
+        }
+
+        &__dark {
+            opacity: 1;
+        }
     }
 
     .section-descr {
@@ -153,10 +207,24 @@ Global
 Header 
 ========================== */
 
+.header {
+    width: 100vw;
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    color: var(--light-text-color);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.1em;
 }
 
 .page-nav {
@@ -164,22 +232,107 @@ Header
     align-items: center;
 }
 
-.logo {
-    margin-right: 130px;
-}
-
 .nav-list {
     display: flex;
     align-items: center;
+    column-gap: 20px;
 
-    &__link{
-        display: inline-block;
+    &__link {
+        @extend %header-links;
     }
 }
 
-// .header-contacts {
-//     display: flex;
-// }
+%header-links {
+    display: inline-block;
+    padding: 20px 0;
+    transition: color var(--transition);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.header-contacts {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    column-gap: 43px;
+}
+
+.address__link {
+    @extend %header-links;
+    width: 100%;
+}
+
+.burger-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+}
+
+.burger-icon {
+    fill: var(--light-text-color);
+}
+
+@include mq-mob() {
+    .nav-list {
+        display: none;
+    }
+
+    .header-contacts {
+        display: none;
+    }
+}
+
+@include mq-tab() {
+
+    .burger-btn {
+        display: none;
+    }
+
+    @include mq-tab-max {
+
+        .page-nav {
+            padding-left: 10px;
+        }
+
+        .logo {
+            margin-right: 59px;
+        }
+
+        .header-contacts {
+            position: relative;
+        }
+
+        .address {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 100%);
+
+            width: 100%;
+            text-align: center;
+
+            z-index: 2;
+        }
+    }
+}
+
+@include mq-desk () {
+
+    .logo {
+            margin-right: 130px;
+        }
+
+    .header-contacts {
+        margin-right: 17px;
+    }
+}
+
 
 /* =======================
 Hero
@@ -233,7 +386,7 @@ Hero
 
 @include mq-tab() {
     .hero-content-wrapper {
-        max-width: 573px;
+        max-width: 572px;
     }
 
     .hero-content {
@@ -254,13 +407,18 @@ Hero
     .hero-content {
         left: 100px;
     }
+
+    .hero-sidebar {
+        position: relative;
+
+        width: 70px;
+    }
 }
 
 .hero-sidebar {
     position: relative;
 
-    background: rgba(23, 26, 36, 0.2);
-    width: 70px;
+    width: 90px;
 }
 
 .sidebar-socials{
