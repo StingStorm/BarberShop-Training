@@ -20,5 +20,194 @@
 
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- ============================= HEADER ============================= -->
+
+    <header class="header">
+      <div class="container header-container">
+        <nav class="page-nav">
+          <a class="logo" href="./index.html">
+            <svg class="logo-icon" width="69" height="56">
+              <use href="./images/logo.svg#icon-logo"></use>
+            </svg>
+          </a>
+
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a href="about" class="nav-list__link">About</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="services" class="nav-list__link">Services and prices</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="barbers" class="nav-list__link">Barbers</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#contacts" class="nav-list__link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-contacts">
+          <button class="main-btn" type="button">Online-booking</button>
+          <address class="address">
+            <a href="tel:+38044111111" class="address-link"
+              >+38 044 111 11 11</a
+            >
+          </address>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================= HERO ============================= -->
+
+    <section class="hero-section">
+      <div class="hero-container">
+        <aside class="hero-sidebar">
+          <ul class="sidebar-socials">
+            <li class="sidebar-socials-item">
+              <a
+                class="sidebar-socials-link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li class="sidebar-socials-item">
+              <a
+                class="sidebar-socials-link"
+                href="https://www.youtube.com/"
+                target="_blank"
+                >Youtube</a
+              >
+            </li>
+          </ul>
+        </aside>
+
+        <div class="hero-content-wrapper">
+          <div class="hero-content">
+            <h3 class="section-subtitle hero-subtitle">
+              A hair salon for men in Kyiv
+            </h3>
+            <h1 class="page-title">BarberShop</h1>
+            <p class="section-descr hero-descr">
+              We are experts in trendy men's haircuts. We work quickly,
+              carefully and with style.
+            </p>
+          </div>
+
+          <div class="slider">
+            <div class="slider-track">
+              <picture class="slide">
+                <source
+                  srcset="
+                    ./images/hero-slider-desk-1.jpg    1x,
+                    ./images/hero-slider-desk-1@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                  width="1070"
+                  height="680"
+                />
+                <source
+                  srcset="
+                    ./images/hero-slider-tab-1.jpg    1x,
+                    ./images/hero-slider-tab-1@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                  media="(min-width: 768px)"
+                  width="573"
+                  height="680"
+                />
+                <img
+                  alt=""
+                  srcset="
+                    ./images/hero-slider-mob-1.jpg    1x,
+                    ./images/hero-slider-mob-1@2x.jpg 2x
+                  "
+                  width="480"
+                  height="580"
+                />
+              </picture>
+              <picture class="slide">
+                <source
+                  srcset="
+                    ./images/hero-slider-desk-2.jpg    1x,
+                    ./images/hero-slider-desk-2@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                  width="1070"
+                  height="680"
+                />
+                <source
+                  srcset="
+                    ./images/hero-slider-tab-2.jpg    1x,
+                    ./images/hero-slider-tab-2@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                  media="(min-width: 768px)"
+                  width="573"
+                  height="680"
+                />
+                <img
+                  alt=""
+                  srcset="
+                    ./images/hero-slider-mob-2.jpg    1x,
+                    ./images/hero-slider-mob-2@2x.jpg 2x
+                  "
+                  width="480"
+                  height="580"
+                />
+              </picture>
+              <picture class="slide">
+                <source
+                  srcset="
+                    ./images/hero-slider-desk-3.jpg    1x,
+                    ./images/hero-slider-desk-3@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                  width="1070"
+                  height="680"
+                />
+                <source
+                  srcset="
+                    ./images/hero-slider-tab-3.jpg    1x,
+                    ./images/hero-slider-tab-3@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                  media="(min-width: 768px)"
+                  width="573"
+                  height="680"
+                />
+                <img
+                  alt=""
+                  srcset="
+                    ./images/hero-slider-mob-3.jpg    1x,
+                    ./images/hero-slider-mob-3@2x.jpg 2x
+                  "
+                  width="480"
+                  height="580"
+                />
+              </picture>
+            </div>
+            <div class="slider-markers">
+              <span class="slider-markers-item is-active"></span>
+              <span class="slider-markers-item"></span>
+              <span class="slider-markers-item"></span>
+            </div>
+            <div class="slider-buttons">
+              <button class="slider-buttons-back" type="button" disabled>
+                Back
+              </button>
+              <button class="slider-buttons-forward" type="button">
+                Forward
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

@@ -1,0 +1,28 @@
+$bpoint-desk: 1200px;
+$bpoint-tab: 768px;
+$bpoint-tab-lock: 1199px;
+$bpoint-mob: 767px;
+
+@mixin mq-desk() {
+    @media screen and (min-width: $bpoint-desk) {
+        @content;
+    }
+}
+
+@mixin mq-tab() {
+    @media screen and (min-width: $bpoint-tab) {
+        @content;
+    }
+}
+
+@mixin mq-tab-lock() {
+    @media screen and (min-width: $bpoint-tab) and (max-width: $bpoint-tab-lock) {
+        @content;
+    }
+}
+
+@mixin mq-mob() {
+    @media screen and (max-width: $bpoint-mob) {
+        @content;
+    }
+}
