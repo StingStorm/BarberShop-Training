@@ -73,7 +73,7 @@
       </div>
     </header>
 
-    <!-- ============================= HERO ============================= -->
+    <!-- ============================== HERO ============================== -->
 
     <section class="hero-section">
       <div class="hero-container">
@@ -227,20 +227,170 @@
     <!-- ============================= About ============================= -->
 
     <section class="section-padding">
-      <div class="img-thumb"></div>
-      <div class="section-content">
-        <h3 class="section-subtitle">About</h3>
-        <h2 class="section-title">Best Barbershop in your city</h2>
-        <p class="section-descr">
-          If you want to add more confidence to your image, you should visit us
-        </p>
-        <p class="section-text">
-          We are a team that never stops at what has been achieved and are
-          thirsty for changes. And when you fall into the hands of our master,
-          you will never be the same again. We are a team that is always "on the
-          same wave" with clients. Therefore, we are always ready to improve
-          everyone who comes to us!
-        </p>
+      <div class="container about-container">
+        <div class="img-thumb">
+          <picture>
+            <source
+              srcset="
+                ./images/about-img-desk-1.jpg    1x,
+                ./images/about-img-desk-1@2x.jpg 2x
+              "
+              type="image/jpeg"
+              media="(min-width: 1200px)"
+              width="270"
+              height="445"
+            />
+
+            <img
+              srcset="
+                ./images/about-img-tab-1.jpg    1x,
+                ./images/about-img-tab-1@2x.jpg 2x
+              "
+              alt="beard shaving"
+              width="330"
+              height="235"
+            />
+          </picture>
+
+          <picture>
+            <source
+              srcset="
+                ./images/about-img-desk-2.jpg    1x,
+                ./images/about-img-desk-2@2x.jpg 2x
+              "
+              type="image/jpeg"
+              media="(min-width: 1200px)"
+              width="270"
+              height="445"
+            />
+            <img
+              srcset="
+                ./images/about-img-tab-2.jpg    1x,
+                ./images/about-img-tab-2@2x.jpg 2x
+              "
+              alt="beard shaving"
+              width="330"
+              height="235"
+            />
+          </picture>
+        </div>
+        <div class="section-flexbox">
+          <div class="section-about-text-thumb">
+            <h3 class="section-subtitle">About</h3>
+            <h2 class="section-title section-about__title">
+              Best Barbershop in your city
+            </h2>
+            <p class="section-descr">
+              If you want to add more confidence to your image, you should visit
+              us
+            </p>
+            <p class="section-text">
+              We are a team that never stops at what has been achieved and are
+              thirsty for changes. And when you fall into the hands of our
+              master, you will never be the same again. We are a team that is
+              always "on the same wave" with clients. Therefore, we are always
+              ready to improve everyone who comes to us!
+            </p>
+          </div>
+          <button class="main-btn-dark section-about__btn" type="button">
+            online-booking
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== Services and prices ====================== -->
+
+    <section class="section-services section-padding test-bg">
+      <div class="container">
+        <h3 class="section-subtitle section-services-subtitle">
+          Spend your time with the best masters
+        </h3>
+        <h2 class="section-title section-services__title">
+          Services and prices
+        </h2>
+
+        <div class="services-list-wrapper">
+          <ul class="services-list">
+            <li class="services-list__item">
+              <p class="services-list__descr">Men's haircut</p>
+              <p class="services-list__descr">from 300 uah.</p>
+            </li>
+            <li class="services-list__item">
+              <p class="services-list__descr">Beard trim</p>
+              <p class="services-list__descr">from 300 uah.</p>
+            </li>
+            <li class="services-list__item">
+              <p class="services-list__descr">Mustache trim</p>
+              <p class="services-list__descr">from 200 uah.</p>
+            </li>
+            <li class="services-list__item">
+              <p class="services-list__descr">Straight razor shave</p>
+              <p class="services-list__descr">from 200 uah.</p>
+            </li>
+          </ul>
+          <ul class="services-list">
+            <li class="services-list__item">
+              <p class="services-list__descr">Trainee's haircut</p>
+              <p class="services-list__descr">from 200 uah.</p>
+            </li>
+            <li class="services-list__item">
+              <p class="services-list__descr">Haircut under the nozzle</p>
+              <p class="services-list__descr">from 200 uah.</p>
+            </li>
+            <li class="services-list__item">
+              <p class="services-list__descr">Children's haircut (0-12 y.o.)</p>
+              <p class="services-list__descr">from 300 uah.</p>
+            </li>
+            <li class="services-list__item">
+              <p class="services-list__descr">Camouflage of gray hair</p>
+              <p class="services-list__descr">from 200 uah.</p>
+            </li>
+          </ul>
+        </div>
+
+        <button class="main-btn section-services__btn" type="button">
+          online-booking
+        </button>
+      </div>
+    </section>
+
+    <!-- =========================== Features =========================== -->
+
+    <section class="section-features section-padding">
+      <div class="container features-container">
+        <div class="section-features-text-thumb">
+          <h3 class="section-subtitle">Old traditional school</h3>
+          <h2 class="section-title">¿Why people come to us?</h2>
+          <p class="section-descr">
+            Only good things are said about us. But it's better to see and feel
+            1 time than read 10 times.
+          </p>
+        </div>
+        <ul class="section-features__list">
+          <li class="section-features__item">
+            <h3 class="section-features-item__title">600</h3>
+            <p class="section-features-item__descr">
+              Satisfied customers per day
+            </p>
+          </li>
+          <li class="section-features__item">
+            <h3 class="section-features-item__title">50</h3>
+            <p class="section-features-item__descr">
+              Awards for excellent service
+            </p>
+          </li>
+          <li class="section-features__item">
+            <h3 class="section-features-item__title">20</h3>
+            <p class="section-features-item__descr">Kyiv's best barbers</p>
+          </li>
+          <li class="section-features__item">
+            <h3 class="section-features-item__title">100</h3>
+            <p class="section-features-item__descr">
+              Gifts for regular customers
+            </p>
+          </li>
+        </ul>
       </div>
     </section>
   </body>
