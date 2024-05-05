@@ -774,3 +774,118 @@ Features
     max-width: 370px;
   }
 }
+/* =======================
+Team
+========================== */
+.section-team {
+  background-color: var(--accent-bg-color);
+}
+
+.section-team__subtitle {
+  margin-bottom: 20px;
+}
+.section-team__title {
+  margin-bottom: 44px;
+}
+
+.section-team-card__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-team-card__picture {
+  margin-bottom: 30px;
+}
+.section-team-card__title {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+.section-team-card__text {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+}
+
+.section-team-social__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.section-team-social__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-bg-color);
+  fill: var(--primary-text-color);
+  transition: fill var(--transition);
+}
+.section-team-social__link:hover {
+  fill: var(--accent-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .section-team-card__item:not(:last-child) {
+    margin-bottom: 64px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-container {
+    display: grid;
+    grid-template-columns: 1fr 450px 1fr;
+  }
+  .team-container > * {
+    grid-column-start: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-team-card__list {
+    display: flex;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .section-team-card__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
+/* =======================
+Portfolio
+========================== */
+.section-portfolio-subtitle {
+  margin-bottom: 71px;
+}
+
+.section-portfolio-card__list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  justify-content: center;
+}
+.section-portfolio-card__item {
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .section-portfolio-subtitle {
+    margin-bottom: 44px;
+  }
+  .section-portfolio-card__list {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .section-portfolio-card__item {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-portfolio-card__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}
