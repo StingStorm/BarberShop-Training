@@ -10,7 +10,7 @@
     --accent-color: #ff6c00;
 
     --primary-bg-color: #fff;
-    --secondary-bg-rgb: #191c26;
+    --secondary-bg-color: #191c26;
     --accent-bg-color: #f7f7f7;
 
     --primary-bg-gradient: linear-gradient(180deg,
@@ -106,6 +106,18 @@ Global
     margin: 0 auto;
 }
 
+@include mq-tab() {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@include mq-desk() {
+    .container {
+        max-width: 1200px;
+    }
+}
+
 .logo-icon {
     &__light {
         opacity: 1;
@@ -123,6 +135,12 @@ Global
     letter-spacing: 0.05em;
     color: var(--light-text-color);
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 380px) {
+    .page-title {
+        font-size: 36px;
+    }
 }
 
 .section-title {
@@ -199,9 +217,6 @@ Global
 }
 
 @include mq-tab() {
-    .container {
-        max-width: 720px;
-    }
 
     .section-padding {
         padding: 100px 0;
@@ -224,9 +239,6 @@ Global
 }
 
 @include mq-desk() {
-    .container {
-        max-width: 1200px;
-    }
 
     .section-padding {
         padding: 120px 0;
@@ -404,6 +416,12 @@ Hero
 .hero-descr {
     max-width: 321px;
     color: var(--secondary-light-text-color);
+}
+
+@media screen and (max-width: 380px) {
+    .hero-descr{
+        max-width: 250px;
+    }  
 }
 
 @include mq-tab() {
@@ -1083,5 +1101,346 @@ Portfolio
 
     .section-portfolio-card__item {
         flex-basis: calc((100% - 90px) / 4);
+    }
+}
+
+
+/* =======================
+Booking&Contacts Wrapper
+========================== */
+
+.sections-wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: var(--secondary-bg-color);
+}
+
+.sections-wrapper > * {
+    flex-basis: calc((100% - 30px) / 2);
+}
+
+@include mq-tab {
+    .sections-wrapper {
+        max-width: 768px;
+    }
+}
+
+@include mq-desk {
+    .sections-wrapper {
+        max-width: 1600px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+.booking-container,
+.contacts-container {
+    max-width: 448px;
+}
+
+@include mq-tab() {
+    .booking-container,
+    .contacts-container {
+        max-width: 720px;
+    }
+}
+
+@include mq-tab-max() {
+    .booking-container,
+    .contacts-container {
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
+
+@include mq-desk() {
+    .booking-container,
+    .contacts-container {
+        max-width: 600px;
+    }
+
+    .booking-container {
+        padding-left: 15px;
+        margin-left: auto;
+    }
+    
+    .contacts-container {
+        padding-left: 105px;
+    }
+}
+
+/* =======================
+Booking
+========================== */
+
+.section-booking__title {
+    color: var(--light-text-color);
+    margin-bottom: 44px;
+}
+
+.booking-from {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+
+.booking-form-field__label {
+    width: 100%;
+    cursor:text;
+}
+
+%form-field-style {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--light-text-color);
+
+    width: 100%;
+    margin-bottom: 44px;
+    background-color: transparent;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: rgba(var(--secondary-light-text-rgb), 0.4);
+    outline-offset: 5px;
+    transition: border-color var(--transition);
+}
+
+.booking-form-field__input {
+    @extend %form-field-style;
+    height: 24px;
+    padding-bottom: 8px;
+}
+
+
+.booking-form-field__textarea {
+    @extend %form-field-style;
+    resize: none;
+    height: 76px;
+}
+
+.booking-form-field {
+    &__input::placeholder,
+    &__textarea::placeholder {
+        text-transform: uppercase;
+        transition: color var(--transition);
+    }
+    &__label:hover &__input,
+    &__label:focus &__input,
+    &__label:hover &__textarea,
+    &__label:focus &__textarea {
+        border-color: var(--primary-bg-color);
+    }
+
+    &__label:hover &__input::placeholder,
+    &__label:focus &__input::placeholder,
+    &__label:hover &__textarea::placeholder,
+    &__label:focus &__textarea::placeholder {
+        color: var(--light-text-color);
+    }
+}
+
+@include mq-mob() {
+    .section-booking__title {
+        text-align: center;
+    }
+
+    .section-booking-form-btn {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@include mq-tab() {
+    .booking-form-field__label:not(:last-child) {
+        flex-basis: calc((100% - 45px) / 2);
+    }
+}
+
+/* =======================
+Contacts
+========================== */
+
+.section-contacts {
+    background-image: url(../images/contacts-bg-mob.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@include mq-tab() {
+    .section-contacts {
+        background-image: url(../images/contacts-bg-tab.png);
+    }
+}
+
+@include mq-desk() {
+    .section-contacts {
+        background-image: url(../images/contacts-bg-desk.png);
+    }
+}
+
+@media screen and (min-resolution: 192dpi) {
+    .section-contacts {
+            background-image: url(../images/contacts-bg-mob@2x.png);
+        }
+    
+        @include mq-tab() {
+            .section-contacts {
+                background-image: url(../images/contacts-bg-tab@2x.png);
+            }
+        }
+    
+        @include mq-desk() {
+            .section-contacts {
+                background-image: url(../images/contacts-bg-desk@2x.png);
+            }
+        }
+}
+
+.section-contacts-title {
+    color: var(--light-text-color);
+    margin-bottom: 40px;
+}
+
+.section-contacts-address__list,
+.section-contacts__working-hours {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--secondary-light-text-color);
+}
+
+.section-contacts-address {
+
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        fill: transparent;
+        stroke: var(--secondary-light-text-color);
+    }
+
+    &__item:first-child {
+        font-weight: 700;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 1px;
+        transition: background-size var(--transition);
+    }
+
+    &__link:hover {
+        background-size: 100% 1px;
+    }
+}
+
+.section-contacts-subtitle {
+    margin-bottom: 20px;
+    color: var(--light-text-color);
+
+    &::before {
+        color: rgba(var(--secondary-light-text-rgb), 0.4);
+    }
+}
+
+@include mq-mob() {
+    .section-contacts-title {
+        text-align: center;
+    }
+
+    .section-contacts-address {
+        margin-bottom: 44px;
+    }
+}
+
+@include mq-tab() {
+    .section-contacts-address__list > *:first-child {
+        max-width: 250px;
+    }
+}
+
+@include mq-tab-minmax {
+    .section-contacts-content-wrapper {
+        display: flex;
+        column-gap: 30px;
+    }
+
+    .section-contacts-address {
+        min-width: 330px;
+    }
+}
+
+@include mq-desk {
+    .section-contacts-address {
+            margin-bottom: 70px;
+        }
+}
+
+/* =======================
+Footer
+========================== */
+
+.footer {
+    padding: 44px 0;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@include mq-mob() {
+    .footer-container {
+        min-height: 50px;
+        align-items: flex-start;
+    }
+
+    .copyright {
+        align-self: flex-end;
+    }
+}
+
+@include mq-tab() {
+    .footer {
+        padding: 56px 0;
+    }
+}
+
+.copyright {
+    color: var(--secondary-light-text-color);
+}
+
+.footer-socials {
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 40px;  
+    }
+
+    &__list::before {
+        content: "";
+        width: 60px;
+        height: 1px;
+        background-color: currentColor;
+    }
+
+    &__link {
+        transition: color var(--transition);
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: var(--accent-color);
     }
 }
