@@ -41,16 +41,18 @@
 
           <ul class="nav-list">
             <li class="nav-list__item">
-              <a href="#about" class="nav-list__link">About</a>
+              <a href="#section-about" class="nav-list__link">About</a>
             </li>
             <li class="nav-list__item">
-              <a href="#services" class="nav-list__link">Services and prices</a>
+              <a href="#section-services" class="nav-list__link"
+                >Services and prices</a
+              >
             </li>
             <li class="nav-list__item">
-              <a href="#barbers" class="nav-list__link">Barbers</a>
+              <a href="#section-team" class="nav-list__link">Barbers</a>
             </li>
             <li class="nav-list__item">
-              <a href="#contacts" class="nav-list__link">Contacts</a>
+              <a href="#section-contacts" class="nav-list__link">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -227,7 +229,7 @@
 
       <!-- ============================= About ============================= -->
 
-      <section class="section-padding">
+      <section class="section-padding" id="section-about">
         <div class="container about-container">
           <div class="img-thumb">
             <picture>
@@ -302,7 +304,10 @@
 
       <!-- ====================== Services and prices ====================== -->
 
-      <section class="section-services section-padding test-bg">
+      <section
+        class="section-services section-padding test-bg"
+        id="section-services"
+      >
         <div class="container">
           <h3 class="section-subtitle section-services-subtitle">
             Spend your time with the best masters
@@ -399,7 +404,7 @@
 
       <!-- ============================= Team ============================= -->
 
-      <section class="section-team section-padding">
+      <section class="section-team section-padding" id="section-team">
         <div class="container team-container">
           <h3 class="section-subtitle section-team__subtitle">
             For true enjoyers of the atmosphere
@@ -896,7 +901,7 @@
 
         <!-- ======================== Contacts ======================== -->
 
-        <section class="section-contacts section-padding">
+        <section class="section-contacts section-padding" id="section-contacts">
           <div class="contacts-container">
             <h2 class="section-title section-contacts-title">Contacts</h2>
             <div class="section-contacts-content-wrapper">
@@ -960,6 +965,9 @@
         </section>
       </div>
     </main>
+
+    <!-- ========================= Footer ========================= -->
+
     <footer class="footer">
       <div class="container footer-container">
         <span class="copyright">&copy;&nbsp;Copyright&nbsp;2020</span>
@@ -983,5 +991,59 @@
         </ul>
       </div>
     </footer>
+
+    <!-- ===================== Backdrop&Modals ===================== -->
+
+    <!-- ================= Mobile Navigation Menu ================= -->
+
+    <div class="backdrop is-open">
+      <div class="mobile-nav-modal modal-nav-text-style">
+        <button class="modal-close-btn" type="button">
+          <svg class="modal-close-btn__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-close-btn"></use>
+          </svg>
+        </button>
+        <nav class="modal-page-nav">
+          <ul class="modal-page-nav__list">
+            <li class="modal-page-nav__item">
+              <a href="#section-about" class="modal-page-nav__link">About</a>
+            </li>
+            <li class="modal-page-nav__item">
+              <a href="#section-services" class="modal-page-nav__link"
+                >Services and prices</a
+              >
+            </li>
+            <li class="modal-page-nav__item">
+              <a href="#section-team" class="modal-page-nav__link">Barbers</a>
+            </li>
+            <li class="modal-page-nav__item">
+              <a href="#section-contacts" class="modal-page-nav__link"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <address class="modal-address">
+          <a class="modal-address__link" href="tel:+380441111111"
+            >+38 044 111 11 11</a
+          >
+        </address>
+        <button class="main-btn-dark modal-booking-btn" type="button">
+          online-booking
+        </button>
+        <ul class="modal-socials__list">
+          <li class="modal-socials__item">
+            <a class="modal-socials__link" href="https://www.instagram.com/"
+              >Instagram</a
+            >
+          </li>
+          <li class="modal-socials__item">
+            <a class="modal-socials__link" href="https://www.youtube.com/"
+              >Youtube</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
