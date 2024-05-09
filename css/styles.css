@@ -1014,13 +1014,13 @@ Booking
   text-transform: uppercase;
   transition: color var(--transition);
 }
-.booking-form-field__label:hover .booking-form-field__input, .booking-form-field__label:focus .booking-form-field__input, .booking-form-field__label:hover .booking-form-field__textarea, .booking-form-field__label:focus .booking-form-field__textarea {
+.booking-form-field__input:hover, .booking-form-field__input:focus, .booking-form-field__textarea:hover, .booking-form-field__textarea:focus {
   border-color: var(--primary-bg-color);
 }
-.booking-form-field__label:hover .booking-form-field__input::-moz-placeholder, .booking-form-field__label:focus .booking-form-field__input::-moz-placeholder, .booking-form-field__label:hover .booking-form-field__textarea::-moz-placeholder, .booking-form-field__label:focus .booking-form-field__textarea::-moz-placeholder {
+.booking-form-field__input:hover::-moz-placeholder, .booking-form-field__input:focus::-moz-placeholder, .booking-form-field__textarea:hover::-moz-placeholder, .booking-form-field__textarea:focus::-moz-placeholder {
   color: var(--light-text-color);
 }
-.booking-form-field__label:hover .booking-form-field__input::placeholder, .booking-form-field__label:focus .booking-form-field__input::placeholder, .booking-form-field__label:hover .booking-form-field__textarea::placeholder, .booking-form-field__label:focus .booking-form-field__textarea::placeholder {
+.booking-form-field__input:hover::placeholder, .booking-form-field__input:focus::placeholder, .booking-form-field__textarea:hover::placeholder, .booking-form-field__textarea:focus::placeholder {
   color: var(--light-text-color);
 }
 
@@ -1329,6 +1329,7 @@ Booking Form
   .modal-booking-form {
     top: 50%;
     left: 50%;
+    z-index: 1;
     transform: translate(-50%, -50%);
     min-width: 50%;
     height: 50%;

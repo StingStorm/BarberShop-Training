@@ -1224,17 +1224,17 @@ Booking
         text-transform: uppercase;
         transition: color var(--transition);
     }
-    &__label:hover &__input,
-    &__label:focus &__input,
-    &__label:hover &__textarea,
-    &__label:focus &__textarea {
+    &__input:hover,
+    &__input:focus,
+    &__textarea:hover,
+    &__textarea:focus {
         border-color: var(--primary-bg-color);
     }
 
-    &__label:hover &__input::placeholder,
-    &__label:focus &__input::placeholder,
-    &__label:hover &__textarea::placeholder,
-    &__label:focus &__textarea::placeholder {
+    &__input:hover::placeholder,
+    &__input:focus::placeholder,
+    &__textarea:hover::placeholder,
+    &__textarea:focus::placeholder {
         color: var(--light-text-color);
     }
 }
@@ -1621,6 +1621,7 @@ Booking Form
     .modal-booking-form {
         top: 50%;
         left: 50%;
+        z-index: 1;
         transform: translate(-50%, -50%);
         min-width: 50%;
         height: 50%;
