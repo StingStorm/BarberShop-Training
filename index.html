@@ -58,7 +58,11 @@
         </nav>
 
         <div class="header-contacts">
-          <button class="main-btn header-btn" type="button">
+          <button
+            class="main-btn header-btn js-open-modal"
+            type="button"
+            data-modal="modal-booking-form"
+          >
             Online-booking
           </button>
           <address class="address">
@@ -67,7 +71,11 @@
             >
           </address>
         </div>
-        <button class="burger-btn" type="button">
+        <button
+          class="burger-btn js-open-modal"
+          type="button"
+          data-modal="modal-nav-menu"
+        >
           <svg class="burger-icon" width="24" height="16">
             <use href="./images/icons.svg#icon-burger-menu"></use>
           </svg>
@@ -295,7 +303,11 @@
                 ready to improve everyone who comes to us!
               </p>
             </div>
-            <button class="main-btn-dark section-about__btn" type="button">
+            <button
+              class="main-btn-dark section-about__btn js-open-modal"
+              type="button"
+              data-modal="modal-booking-form"
+            >
               online-booking
             </button>
           </div>
@@ -357,7 +369,11 @@
             </ul>
           </div>
 
-          <button class="main-btn section-services__btn" type="button">
+          <button
+            class="main-btn section-services__btn js-open-modal"
+            type="button"
+            data-modal="modal-booking-form"
+          >
             online-booking
           </button>
         </div>
@@ -996,9 +1012,9 @@
 
     <!-- ================= Mobile Navigation Menu ================= -->
 
-    <div class="backdrop is-open">
-      <div class="mobile-nav-modal modal-nav-text-style">
-        <button class="modal-close-btn" type="button">
+    <div class="backdrop" id="backdrop">
+      <div class="modal mobile-nav-modal" data-modal="modal-nav-menu">
+        <button class="modal-close-btn js-modal-close" type="button">
           <svg class="modal-close-btn__icon" width="40" height="40">
             <use href="./images/icons.svg#icon-close-btn"></use>
           </svg>
@@ -1006,18 +1022,30 @@
         <nav class="modal-page-nav">
           <ul class="modal-page-nav__list">
             <li class="modal-page-nav__item">
-              <a href="#section-about" class="modal-page-nav__link">About</a>
+              <a
+                href="#section-about"
+                class="modal-page-nav__link js-modal-close"
+                >About</a
+              >
             </li>
             <li class="modal-page-nav__item">
-              <a href="#section-services" class="modal-page-nav__link"
+              <a
+                href="#section-services"
+                class="modal-page-nav__link js-modal-close"
                 >Services and prices</a
               >
             </li>
             <li class="modal-page-nav__item">
-              <a href="#section-team" class="modal-page-nav__link">Barbers</a>
+              <a
+                href="./index.html#section-team"
+                class="modal-page-nav__link js-modal-close"
+                >Barbers</a
+              >
             </li>
             <li class="modal-page-nav__item">
-              <a href="#section-contacts" class="modal-page-nav__link"
+              <a
+                href="#section-contacts"
+                class="modal-page-nav__link js-modal-close"
                 >Contacts</a
               >
             </li>
@@ -1028,7 +1056,11 @@
             >+38 044 111 11 11</a
           >
         </address>
-        <button class="main-btn-dark modal-booking-btn" type="button">
+        <button
+          class="main-btn-dark modal-booking-btn js-open-modal js-modal-switch"
+          type="button"
+          data-modal="modal-booking-form"
+        >
           online-booking
         </button>
         <ul class="modal-socials__list">
@@ -1044,6 +1076,23 @@
           </li>
         </ul>
       </div>
+
+      <!-- ================= Modal Booking Form ================= -->
+
+      <div class="modal modal-booking-form" data-modal="modal-booking-form">
+        <button class="modal-booking-close-btn js-modal-close" type="button">
+          <svg class="modal-close-btn__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-close-btn"></use>
+          </svg>
+        </button>
+        <h2 class="section-title bookin-modal__title">
+          Here should be your form
+        </h2>
+      </div>
     </div>
+
+    <!-- ============================= JS Scripts ============================= -->
+    <script src="./js/closest.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

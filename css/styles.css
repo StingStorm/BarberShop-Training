@@ -1240,7 +1240,7 @@ Mobile Navigation Menu
     box-shadow: -1px 0 3px 0 rgba(0, 0, 0, 0.16), -2px 0 4px 0 rgba(0, 0, 0, 0.08), -4px 0 8px 0 rgba(0, 0, 0, 0.04);
     transition: transform var(--transition);
   }
-  .backdrop.is-open .mobile-nav-modal {
+  .mobile-nav-modal.is-open {
     transform: translateX(0);
   }
   .modal-close-btn {
@@ -1297,4 +1297,60 @@ Mobile Navigation Menu
   .modal-socials__link:focus {
     color: var(--accent-color);
   }
+}
+@media screen and (min-width: 768px) {
+  .mobile-nav-modal {
+    display: none;
+  }
+}
+/* =======================
+Booking Form
+========================== */
+.modal-booking-form {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 90%;
+  height: 80%;
+  padding: 80px 40px;
+  background-color: var(--primary-bg-color);
+  box-shadow: -1px 0 3px 0 rgba(0, 0, 0, 0.16), -2px 0 4px 0 rgba(0, 0, 0, 0.08), -4px 0 8px 0 rgba(0, 0, 0, 0.04);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition), visibility var(--transition);
+}
+
+@media screen and (min-width: 768px) {
+  .modal-booking-form {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 50%;
+    height: 50%;
+  }
+}
+.modal-booking-form.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-booking-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--primary-text-color);
+}
+
+.bookin-modal__title {
+  text-align: center;
 }
