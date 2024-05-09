@@ -14,18 +14,23 @@ modalButtons.forEach(function(item) {
 
         modalElem.classList.add('is-open');
         backdrop.classList.add('is-open');
-      }); // end click
-}); // end foreach
-    
-closeModalButtons.forEach(function(item){
-    item.addEventListener('click', function(e) {
-    let parentModal = this.closest('.modal');
 
-    parentModal.classList.remove('is-open');
-    backdrop.classList.remove('is-open');
-    });
+        window.addEventListener('click', function (e) {
+        if (e.target === backdrop) {
+            modalElem.classList.remove('is-open');
+            backdrop.classList.remove('is-open');
+    }
+        }); // end click
+        
+        closeModalButtons.forEach(function (item) {
+            item.addEventListener('click', function (e) {
+                modalElem.classList.remove('is-open');
+                backdrop.classList.remove('is-open');
+            })
+        }); 
+    }); // end click
 }); // end foreach
-    
+
 switchModalButtons.forEach(function(item){
     item.addEventListener('click', function(e) {
     let parentModal = this.closest('.modal');
@@ -34,4 +39,19 @@ switchModalButtons.forEach(function(item){
     });
 }); // end foreach
 }); // end ready
+
+
+
+
+
+
+
+// closeModalButtons.forEach(function(item){
+//     item.addEventListener('click', function(e) {
+//     let parentModal = this.closest('.modal');
+
+//     parentModal.classList.remove('is-open');
+//     backdrop.classList.remove('is-open');
+//     }); // end click
+// }); // end foreach
 
