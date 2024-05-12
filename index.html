@@ -18,6 +18,7 @@
       referrerpolicy="no-referrer"
     />
 
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -122,113 +123,113 @@
             </div>
 
             <div class="slider">
-              <div class="slider-track">
-                <picture class="slide">
-                  <source
-                    srcset="
-                      ./images/hero-slider-desk-1.jpg    1x,
-                      ./images/hero-slider-desk-1@2x.jpg 2x
-                    "
-                    type="image/jpeg"
-                    media="(min-width: 1200px)"
-                    width="1070"
-                    height="680"
-                  />
-                  <source
-                    srcset="
-                      ./images/hero-slider-tab-1.jpg    1x,
-                      ./images/hero-slider-tab-1@2x.jpg 2x
-                    "
-                    type="image/jpeg"
-                    media="(min-width: 768px)"
-                    width="573"
-                    height="680"
-                  />
-                  <img
-                    alt=""
-                    srcset="
-                      ./images/hero-slider-mob-1.jpg    1x,
-                      ./images/hero-slider-mob-1@2x.jpg 2x
-                    "
-                    width="480"
-                    height="580"
-                  />
-                </picture>
-                <picture class="slide">
-                  <source
-                    srcset="
-                      ./images/hero-slider-desk-2.jpg    1x,
-                      ./images/hero-slider-desk-2@2x.jpg 2x
-                    "
-                    type="image/jpeg"
-                    media="(min-width: 1200px)"
-                    width="1070"
-                    height="680"
-                  />
-                  <source
-                    srcset="
-                      ./images/hero-slider-tab-2.jpg    1x,
-                      ./images/hero-slider-tab-2@2x.jpg 2x
-                    "
-                    type="image/jpeg"
-                    media="(min-width: 768px)"
-                    width="573"
-                    height="680"
-                  />
-                  <img
-                    alt=""
-                    srcset="
-                      ./images/hero-slider-mob-2.jpg    1x,
-                      ./images/hero-slider-mob-2@2x.jpg 2x
-                    "
-                    width="480"
-                    height="580"
-                  />
-                </picture>
-                <picture class="slide">
-                  <source
-                    srcset="
-                      ./images/hero-slider-desk-3.jpg    1x,
-                      ./images/hero-slider-desk-3@2x.jpg 2x
-                    "
-                    type="image/jpeg"
-                    media="(min-width: 1200px)"
-                    width="1070"
-                    height="680"
-                  />
-                  <source
-                    srcset="
-                      ./images/hero-slider-tab-3.jpg    1x,
-                      ./images/hero-slider-tab-3@2x.jpg 2x
-                    "
-                    type="image/jpeg"
-                    media="(min-width: 768px)"
-                    width="573"
-                    height="680"
-                  />
-                  <img
-                    alt=""
-                    srcset="
-                      ./images/hero-slider-mob-3.jpg    1x,
-                      ./images/hero-slider-mob-3@2x.jpg 2x
-                    "
-                    width="480"
-                    height="580"
-                  />
-                </picture>
-              </div>
-              <div class="slider-markers">
-                <span class="slider-markers-item is-active"></span>
-                <span class="slider-markers-item"></span>
-                <span class="slider-markers-item"></span>
-              </div>
-              <div class="slider-buttons">
-                <button class="slider-buttons-back" type="button" disabled>
-                  Back
-                </button>
-                <button class="slider-buttons-forward" type="button">
-                  Forward
-                </button>
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <picture class="slide swiper-slide">
+                    <source
+                      srcset="
+                        ./images/hero-slider-desk-1.jpg    1x,
+                        ./images/hero-slider-desk-1@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 1200px)"
+                      width="1070"
+                      height="680"
+                    />
+                    <source
+                      srcset="
+                        ./images/hero-slider-tab-1.jpg    1x,
+                        ./images/hero-slider-tab-1@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 768px)"
+                      width="573"
+                      height="680"
+                    />
+                    <img
+                      alt=""
+                      srcset="
+                        ./images/hero-slider-mob-1.jpg    1x,
+                        ./images/hero-slider-mob-1@2x.jpg 2x
+                      "
+                      width="480"
+                      height="580"
+                    />
+                  </picture>
+                  <picture class="slide swiper-slide">
+                    <source
+                      srcset="
+                        ./images/hero-slider-desk-2.jpg    1x,
+                        ./images/hero-slider-desk-2@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 1200px)"
+                      width="1070"
+                      height="680"
+                    />
+                    <source
+                      srcset="
+                        ./images/hero-slider-tab-2.jpg    1x,
+                        ./images/hero-slider-tab-2@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 768px)"
+                      width="573"
+                      height="680"
+                    />
+                    <img
+                      alt=""
+                      srcset="
+                        ./images/hero-slider-mob-2.jpg    1x,
+                        ./images/hero-slider-mob-2@2x.jpg 2x
+                      "
+                      width="480"
+                      height="580"
+                    />
+                  </picture>
+                  <picture class="slide swiper-slide">
+                    <source
+                      srcset="
+                        ./images/hero-slider-desk-3.jpg    1x,
+                        ./images/hero-slider-desk-3@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 1200px)"
+                      width="1070"
+                      height="680"
+                    />
+                    <source
+                      srcset="
+                        ./images/hero-slider-tab-3.jpg    1x,
+                        ./images/hero-slider-tab-3@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 768px)"
+                      width="573"
+                      height="680"
+                    />
+                    <img
+                      alt=""
+                      srcset="
+                        ./images/hero-slider-mob-3.jpg    1x,
+                        ./images/hero-slider-mob-3@2x.jpg 2x
+                      "
+                      width="480"
+                      height="580"
+                    />
+                  </picture>
+                </div>
+                <div class="swiper-pagination__custom">
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="slider-buttons">
+                  <button class="slider-buttons-back" type="button">
+                    Back
+                  </button>
+                  <button class="slider-buttons-forward" type="button">
+                    Forward
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -1092,7 +1093,11 @@
     </div>
 
     <!-- ============================= JS Scripts ============================= -->
-    <script src="./js/closest.js"></script>
+    <script
+      type="text/javascript"
+      src="./node_modules/swiper/swiper-bundle.min.js"
+    ></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
