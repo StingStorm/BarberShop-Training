@@ -1,5 +1,5 @@
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
+    // Parameters
     direction: 'horizontal',
     loop: true,
     grabCursor: true,
@@ -7,7 +7,7 @@ const swiper = new Swiper('.swiper', {
         delay: 2500,
     },
 
-    // If we need pagination
+    //pagination
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
