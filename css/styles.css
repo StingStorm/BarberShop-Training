@@ -67,6 +67,11 @@ button {
   cursor: pointer;
 }
 
+textarea,
+input {
+  border-radius: 0;
+}
+
 /* =======================
 utils
 ========================== */
@@ -524,6 +529,7 @@ Hero
   width: 8px;
   height: 2px;
   opacity: 1;
+  border-radius: 0;
   background-color: var(--secondary-light-text-color);
 }
 .swiper-pagination__custom .swiper-pagination > .swiper-pagination-bullet:not(:last-child) {

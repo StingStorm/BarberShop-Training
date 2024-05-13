@@ -74,6 +74,16 @@ button {
     cursor: pointer;
 }
 
+textarea,
+input {
+    border-radius: 0;
+}
+
+// textarea,
+// input[type] {
+//     -webkit-appearance: none;
+// }
+
 /* =======================
 utils
 ========================== */
@@ -632,6 +642,7 @@ Hero
         width: 8px;
         height: 2px;
         opacity: 1;
+        border-radius: 0;
 
         background-color: var(--secondary-light-text-color);
     }
