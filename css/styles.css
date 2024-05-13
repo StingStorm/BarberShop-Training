@@ -530,6 +530,7 @@ Hero
   height: 2px;
   opacity: 1;
   border-radius: 0;
+  transition: width var(--transition), background-color var(--transition);
   background-color: var(--secondary-light-text-color);
 }
 .swiper-pagination__custom .swiper-pagination > .swiper-pagination-bullet:not(:last-child) {
